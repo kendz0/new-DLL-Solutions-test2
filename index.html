@@ -7,17 +7,20 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             background-color: #f0f2f5;
             line-height: 1.6;
         }
-        h1 {
+        h1, h2, h3 {
             color: #2c3e50;
             text-align: center;
+        }
+        h1 {
             padding-bottom: 15px;
             border-bottom: 3px solid #3498db;
+            margin-bottom: 30px;
         }
         p {
             color: #34495e;
@@ -25,12 +28,125 @@
             font-size: 18px;
             margin: 15px 0;
         }
+        .section {
+            background: white;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+        .service-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 10px;
+        }
     </style>
 </head>
 <body>
     <h1>Welcome to DLL Solutions</h1>
-    <p>Professional software development and technology solutions based in Topsfield, MA.</p>
-    <p>Hours: Monday - Friday, 8:00 AM - 5:00 PM</p>
-    <p>Location: 58 Main Street, Topsfield, MA</p>
+    
+    <div class="section">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Software Development</h3>
+                <p>Custom software solutions tailored to your business needs</p>
+            </div>
+            <div class="service-card">
+                <h3>System Integration</h3>
+                <p>Seamless integration of your business systems</p>
+            </div>
+            <div class="service-card">
+                <h3>Technology Consulting</h3>
+                <p>Expert guidance for your technical decisions</p>
+            </div>
+            <div class="service-card">
+                <h3>Support Services</h3>
+                <p>Reliable technical support and maintenance</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>About Us</h2>
+        <p>DLL Solutions is a leading technology company based in Topsfield, MA. We specialize in delivering high-quality software solutions and technical expertise to businesses of all sizes.</p>
+        <p>With years of experience in the industry, our team of skilled professionals is committed to helping our clients achieve their technology goals through innovative solutions and reliable support.</p>
+    </div>
+
+    <div class="section">
+        <h2>Contact Us</h2>
+        <p>Hours: Monday - Friday, 8:00 AM - 5:00 PM</p>
+        <p>Location: 58 Main Street, Topsfield, MA</p>
+        
+        <div class="contact-form">
+            <h3>Send us a message</h3>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">GitHub</a>
+        </div>
+    </div>
 </body>
 </html>
